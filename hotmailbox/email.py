@@ -1,5 +1,3 @@
-# have discord get codes on here
-
 import httpx
 from hotmailbox.errors import *
 
@@ -120,7 +118,7 @@ class Email():
         
         else:
             if request_json['Success'] == True:
-                return request_json['VerificationCode'].replace(r"\r", "").replace(r"\n", "").replace("\n", "")
+                return request_json['VerificationCode'].replace(r"\r", "").replace(r"\n", "").replace("\n", "").replace("%0D", "")
             
             else:
                 return None
