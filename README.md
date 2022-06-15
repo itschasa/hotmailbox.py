@@ -2,7 +2,6 @@
     <h1>hotmailbox.py</h1>
     <p>📧 Use hotmailbox.me quickly and efficiently</p>
     <img src="https://img.shields.io/github/license/ItsChasa/hotmailbox.py?style=flat">
-    <img src="https://img.shields.io/github/downloads/ItsChasa/hotmailbox.py/total?style=flat">
     <img src="https://img.shields.io/github/stars/ItsChasa/hotmailbox.py?style=flat">
     <img src="https://img.shields.io/github/forks/ItsChasa/hotmailbox.py?style=flat">
     <img src="https://sonarcloud.io/api/project_badges/measure?project=itschasa_hotmailbox.py&metric=ncloc"/>
