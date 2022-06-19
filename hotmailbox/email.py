@@ -36,11 +36,15 @@ class Email():
         self.password         = password
     
     
-    def facebook(self, timeout=30):
+    def facebook(self, timeout=30, body=False):
         """Fetch Facebook verification code and returns as `str`
         
         timeout :class:`int`
             How long to wait for code before returning `None`
+        body :class:`bool`
+            If `True`, returns MailBody instead of code.
+        body :class:`bool`
+            If `True`, returns MailBody instead of code.
         """
 
         try:
@@ -52,17 +56,19 @@ class Email():
         
         else:
             if request_json['Success'] == True:
-                return request_json['VerificationCode']
-            
+                if body: return request_json['MailBody']
+                else: return request_json['VerificationCode']
             else:
                 return None
     
 
-    def twitter(self, timeout=30):
+    def twitter(self, timeout=30, body=False):
         """Fetch Twitter verification code and returns as `str`
         
         timeout :class:`int`
             How long to wait for code before returning `None`
+        body :class:`bool`
+            If `True`, returns MailBody instead of code.
         """
 
         try:
@@ -74,17 +80,19 @@ class Email():
         
         else:
             if request_json['Success'] == True:
-                return request_json['VerificationCode']
-            
+                if body: return request_json['MailBody']
+                else: return request_json['VerificationCode']
             else:
                 return None
     
 
-    def amazon(self, timeout=30):
+    def amazon(self, timeout=30, body=False):
         """Fetch Amazon verification code and returns as `str`
         
         timeout :class:`int`
             How long to wait for code before returning `None`
+        body :class:`bool`
+            If `True`, returns MailBody instead of code.
         """
 
         try:
@@ -96,17 +104,19 @@ class Email():
         
         else:
             if request_json['Success'] == True:
-                return request_json['VerificationCode']
-            
+                if body: return request_json['MailBody']
+                else: return request_json['VerificationCode']
             else:
                 return None
     
 
-    def discord(self, timeout=30):
+    def discord(self, timeout=30, body=False):
         """Fetch Discord verification code and returns as `str`
         
         timeout :class:`int`
             How long to wait for code before returning `None`
+        body :class:`bool`
+            If `True`, returns MailBody instead of link.
         """
 
         try:
@@ -118,8 +128,8 @@ class Email():
         
         else:
             if request_json['Success'] == True:
-                return request_json['VerificationCode'].replace(r"\r", "").replace(r"\n", "").replace("\n", "").replace("%0D", "")
-            
+                if body: return request_json['MailBody']
+                else: return request_json['VerificationCode'].replace(r"\r", "").replace(r"\n", "").replace("\n", "")
             else:
                 return None
         

@@ -10,7 +10,7 @@ __title__ = 'hotmailbox'
 __author__ = 'itschasa'
 __license__ = 'GNU Affero General Public License v3.0'
 __copyright__ = 'Copyright 2022-present itschasa'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 from hotmailbox.user import *
 from hotmailbox.email import *
